@@ -1,0 +1,21 @@
+import gc
+
+class Demo:
+    def __init__(self):
+        print("Inside Constructor")
+
+    def __del__(self):
+        print("inside destructor")
+
+# Allocate
+obj=Demo()
+
+# Use
+
+# Deallocate
+del obj
+
+
+gc.collect()
+
+print("End of application")
